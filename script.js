@@ -27,19 +27,12 @@ document.addEventListener("DOMContentLoaded", () => {
       
       // Basic validation check before replacing UI
       if(!form.checkValidity()) {
-        return; // Let the browser show native validation errors (e.g. "Please fill out this field")
+        return; // Let the browser show native validation errors
       }
 
       const submitBtn = form.querySelector("button[type='submit']");
       submitBtn.textContent = "Sending...";
       submitBtn.disabled = true;
-
-      // Append the SMS consent into the Description field so Zoho records it
-      const msgField = document.getElementById("message");
-      const smsCheckbox = document.getElementById("sms_consent");
-      if (msgField && smsCheckbox && smsCheckbox.checked) {
-          msgField.value = msgField.value + "\n\n[SMS Consent: YES]";
-      }
 
       // The form naturally submits via POST to the hidden iframe.
       // We use a short timeout to fade the form out and show the success message.
