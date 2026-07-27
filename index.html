@@ -279,15 +279,16 @@
           <!-- Hidden iframe for Zoho submission -->
           <iframe name="zoho-frame" id="zoho-frame" style="display:none;"></iframe>
           
-          <form class="contact-form" id="contact-form" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" novalidate>
-            
-            <!-- Zoho CRM Hidden Fields (Replace YOUR_XNQSJSDP_HERE and YOUR_XMFABNKFD_HERE with your specific keys from Zoho) -->
+          <form class="contact-form" id="contact-form" action="https://crm.zoho.com/crm/WebToLeadForm" method="POST" target="zoho-frame" novalidate>
+  
+            <!-- Zoho CRM Hidden System Fields -->
             <input type="hidden" name="xnQsjsdp" value="73b8d9975386e6cc71573f2659adbc2b613566f80e84ce1faf5c080b070cc9db" />
-            <input type="hidden" name="xmFaBnkfd" value="c483f24063c0d30a0654f8239bf93a2f76ce76e4651f0ea5f7cfcb8dd887bb9c8df90e83dc478db2c91327b114189d7a" />
+            <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+            <input type="hidden" name="xmIwtLD" value="c483f24063c0d30a0654f8239bf93a2f76ce76e4651f0ea5f7cfcb8dd887bb9c8df90e83dc478db2c91327b114189d7a" />
             <input type="hidden" name="actionType" value="TGVhZHM=" />
             <input type="hidden" name="returnURL" value="https://pinnacleprocessconsulting.com" />
-            <!-- Note: Zoho uses "Last Name" as the default required field -->
-
+            <input type="hidden" name="aG9uZXlwb3Q" value="" />
+          
             <div class="form-fields">
               <div class="form-row">
                 <div class="field">
