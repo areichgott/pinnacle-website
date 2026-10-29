@@ -582,10 +582,10 @@ h2.section-title {
 .contact .wrap { position: relative; }
 .contact-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 1fr;
   gap: 56px;
 }
-.contact-info p { color: var(--text-sand-muted); margin-top: 16px; max-width: 40ch; }
+.contact-info p { color: var(--text-sand-muted); margin-top: 16px; max-width: 64ch; }
 
 /* Direct Booking Block in Contact Info */
 .contact-booking {

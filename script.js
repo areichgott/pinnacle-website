@@ -19,26 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-  // Contact form Zoho CRM Web-to-Lead submission handler
-  const form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      
-      // Basic validation check before replacing UI
-      if(!form.checkValidity()) {
-        return; // Let the browser show native validation errors
-      }
-
-      const submitBtn = form.querySelector("button[type='submit']");
-      submitBtn.textContent = "Sending...";
-      submitBtn.disabled = true;
-
-      // The form naturally submits via POST to the hidden iframe.
-      // We use a short timeout to fade the form out and show the success message.
-      setTimeout(() => {
-        form.classList.add("submitted");
-      }, 600);
-    });
-  }
 });
