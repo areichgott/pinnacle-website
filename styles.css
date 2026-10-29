@@ -585,23 +585,36 @@ h2.section-title {
   grid-template-columns: 1fr;
   gap: 56px;
 }
-.contact-info p { color: var(--text-sand-muted); margin-top: 16px; max-width: 64ch; }
+.contact-info { text-align: center; }
+.contact-info h2.section-title { margin-left: auto; margin-right: auto; }
+.contact-info p { color: var(--text-sand-muted); margin: 16px auto 0; max-width: 56ch; }
 
-/* Direct Booking Block in Contact Info */
+/* Booking and email options, side by side */
+.contact-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 880px;
+  margin: 48px auto 0;
+}
 .contact-booking {
-  margin-top: 36px;
-  padding-top: 28px;
-  border-top: 1px solid var(--line-on-navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 28px;
+  border: 1px solid var(--line-on-navy);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.03);
 }
 .contact-booking h3 {
   font-size: 1.12rem;
   color: var(--text-sand);
 }
-.contact-booking p {
+.contact-info .contact-booking p {
   font-size: 0.92rem;
   margin-top: 8px;
-  margin-bottom: 20px;
-  color: var(--text-sand-muted);
+  margin-bottom: 24px;
+  flex-grow: 1;
 }
 
 .contact-form {
@@ -804,6 +817,7 @@ img.headshot {
   .headshot.img-placeholder { max-width: 300px; aspect-ratio: 3/4; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
+  .contact-options { grid-template-columns: 1fr; }
   .process-track { grid-template-columns: 1fr; gap: 34px; }
   .process-track::before { display: none; }
 }
